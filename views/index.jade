@@ -1,0 +1,63 @@
+extends layout
+
+block content
+
+
+    // Wrapper
+    #wrapper
+
+        // Sentence INFO
+        #sentenceFullInfo
+            h2 Sentence Info
+            p
+                strong Full Sentence:
+                |  <span id='showsentenceinfo'></span>
+                br
+                br
+                br
+
+
+        // /Sentence INFO
+
+        // Sentence LIST
+        h2 Sentences List
+        #dbSentences
+            table
+                thead
+                    th sentence info
+                    th Delete?
+                tbody
+        // /Sentence LIST
+
+        // ADD SENTENCE
+        h2 Add Sentence
+        #addSentence
+            fieldset
+                input#inputSentenceInfo(type='text', placeholder='Write sentence here')
+                br
+                button#btnAddSentence Add Sentence
+        // /ADD SENTENCE
+
+        // CHECK SENTENCE SIMILARITY
+        h2 CHECK SENTENCE SIMILARITY
+        #checkSimilarity
+            fieldset
+                input#similarityInputSentenceInfo(type='text', placeholder='Write sentence here')
+                br
+                button#btncheckSimilarity Check Similarity
+        // /CHECK SENTENCE SIMILARITY
+
+        // Sentence SIMILARITY
+        #sentenceSimilarityInfo
+            h2 Similar Sentence Info
+            p
+                strong Similar Sentence:
+                br
+                |full sentence:  <span id='showsimilarsentenceinfo'></span>
+                br
+                |rating:   <span id='showsimilarsentencerating'></span>
+                br
+
+        // /Sentence SIMILARITY
+
+    // /WRAPPER
