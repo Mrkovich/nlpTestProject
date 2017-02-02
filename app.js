@@ -11,7 +11,10 @@ var stringSimilarity = require('string-similarity');
 // Database
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('localhost:27017/project');
+
+var connectionString = process.env.mongodb || 'localhost:27017/project';
+
+var db = monk(connectionString);
 
 var index = require('./routes/index');
 var sentences = require('./routes/sentences');
